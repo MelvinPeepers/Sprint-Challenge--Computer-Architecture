@@ -18,6 +18,13 @@ POP = 0b01000110  # 70
 PUSH = 0b01000101  # 69
 CALL = 0b01010000  # 80
 RET = 0b00010001  # 17
+
+CMP = 0b10100111  # 167
+JMP = 0b01010100  # 84
+JEQ = 0b01010101  # 85
+JNE = 0b01010110  # 86
+# Doubled checked this numbers to ensure they are correct
+
 SP = 7  # register location that holds top of stack address
 # store the top of memory into Register 7
 
