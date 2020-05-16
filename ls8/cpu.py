@@ -122,12 +122,20 @@ class CPU:
 
             If registerA is greater than registerB, set the Greater-than G flag to 1, otherwise set it to 0.
             """
+            # FL bits: 00000LGE
+            # L Less-than: during a CMP, set to 1 if registerA is less than registerB, zero otherwise. 00000100
+            # G Greater-than: during a CMP, set to 1 if registerA is greater than registerB, zero otherwise.00000010
+            # E Equal: during a CMP, set to 1 if registerA is equal to registerB, zero otherwise. 00000001
+
+            # if reg_a is equal to reg_b 00000001
             if self.reg[reg_a] == self.reg[reg_b]:
                 self.flag = 0b00000001
 
+            # if reg_a is less then reg_b 00000100
             if self.reg[reg_a] < self.reg[reg_b]:
                 self.flag = 0b00000100
 
+            # if reg_a is greater then to reg_b 00000010
             if self.reg[reg_a] > self.reg[reg_b]:
                 self.flag = 0b00000010
 
@@ -224,6 +232,31 @@ class CPU:
                 self.reg[SP] += 1
                 # set the PC to that value
                 self.pc = return_address
+
+            elif ir == CMP:
+                self.alu("CMP", operand_a, operand_b)
+                self.pc += 3
+
+            elif ir == JMP:
+                # Jump to the address stored in the given register.
+                # Set the PC to the address stored in the given register.
+                self.pc = self.reg[operand_a]
+
+            elif ir == JEQ:
+                # If equal flag is set (true), jump to the address stored in the given register.
+                # 00000001
+                if self.flag == 0b00000001:
+                    self.pc = self.reg[operand_a]
+                else:
+                    self.pc += 2
+
+            elif ir == JNE:
+                # If E flag is clear (false, 0), jump to the address stored in the given register.
+                # 00000001
+                if self.flag != 0b00000001:
+                    self.pc = self.reg[operand_a]
+                else:
+                    self.pc += 2
 
             else:
                 # if command is non recognizable

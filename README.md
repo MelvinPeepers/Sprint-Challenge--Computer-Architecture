@@ -44,7 +44,7 @@ Options for submission, whichever is easier for you:
 
 # Copied my files over from Computer-Architecture. Ran python3 ls8.py examples/call.ls8, python3 ls8.py examples/stack.ls8
 
-and python3 ls8.py examples/mult.ls8 to ensure everything was still working as expected.
+# and python3 ls8.py examples/mult.ls8 to ensure everything was still working as expected.
 
 #
 
@@ -55,11 +55,19 @@ and python3 ls8.py examples/mult.ls8 to ensure everything was still working as e
 
 Your finished project must include all of the following requirements:
 
-- [ ] Add the `CMP` instruction and `equal` flag to your LS-8.
+- [x] Add the `CMP` instruction and `equal` flag to your LS-8.
 
-- [ ] Add the `JMP` instruction.
+- [x] Add the `JMP` instruction.
 
-- [ ] Add the `JEQ` and `JNE` instructions.
+- [x] Add the `JEQ` and `JNE` instructions.
+
+# after running python3 ls8.py examples/sctest.ls8 I get:
+
+# 1
+
+# 4
+
+# 5
 
 [See the LS-8 spec for details](https://github.com/LambdaSchool/Computer-Architecture/blob/master/LS8-spec.md)
 
