@@ -112,6 +112,25 @@ class CPU:
         elif op == "DIV":  # division
             self.reg[reg_a] /= self.reg[reg_b]
 
+        elif op == "CMP":
+            """
+            Compare the values in two registers.
+
+            If they are equal, set the Equal E flag to 1, otherwise set it to 0.
+
+            If registerA is less than registerB, set the Less-than L flag to 1, otherwise set it to 0.
+
+            If registerA is greater than registerB, set the Greater-than G flag to 1, otherwise set it to 0.
+            """
+            if self.reg[reg_a] == self.reg[reg_b]:
+                self.flag = 0b00000001
+
+            if self.reg[reg_a] < self.reg[reg_b]:
+                self.flag = 0b00000100
+
+            if self.reg[reg_a] > self.reg[reg_b]:
+                self.flag = 0b00000010
+
         else:
             raise Exception("Unsupported ALU operation")
 
