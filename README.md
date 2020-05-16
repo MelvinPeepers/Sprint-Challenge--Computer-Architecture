@@ -38,9 +38,17 @@ In this code challenge, you will add _conditional jumps_ (AKA _conditional branc
 
 Options for submission, whichever is easier for you:
 
-* Copy your source into this repo, or...
+- Copy your source into this repo, or...
 
-* Submit a PR for the Sprint Challenge from the `Computer-Architecture` repo
+#
+
+# Copied my files over from Computer-Architecture. Ran python3 ls8.py examples/call.ls8, python3 ls8.py examples/stack.ls8
+
+and python3 ls8.py examples/mult.ls8 to ensure everything was still working as expected.
+
+#
+
+- Submit a PR for the Sprint Challenge from the `Computer-Architecture` repo
   you've been using all along.
 
 ## Minimum Viable Product
