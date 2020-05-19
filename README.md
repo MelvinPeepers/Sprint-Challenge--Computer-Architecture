@@ -40,13 +40,9 @@ Options for submission, whichever is easier for you:
 
 - Copy your source into this repo, or...
 
-#
+Copied my files over from Computer-Architecture. Ran python3 ls8.py examples/call.ls8, python3 ls8.py examples/stack.ls8
 
-# Copied my files over from Computer-Architecture. Ran python3 ls8.py examples/call.ls8, python3 ls8.py examples/stack.ls8
-
-# and python3 ls8.py examples/mult.ls8 to ensure everything was still working as expected.
-
-#
+and python3 ls8.py examples/mult.ls8 to ensure everything was still working as expected.
 
 - Submit a PR for the Sprint Challenge from the `Computer-Architecture` repo
   you've been using all along.
@@ -61,13 +57,11 @@ Your finished project must include all of the following requirements:
 
 - [x] Add the `JEQ` and `JNE` instructions.
 
-# after running python3 ls8.py examples/sctest.ls8 I get:
+after running python3 ls8.py examples/sctest.ls8 I get:
 
-# 1
-
-# 4
-
-# 5
+1
+4
+5
 
 [See the LS-8 spec for details](https://github.com/LambdaSchool/Computer-Architecture/blob/master/LS8-spec.md)
 
